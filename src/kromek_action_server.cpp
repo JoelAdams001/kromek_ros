@@ -102,6 +102,7 @@ int sensor_num_;
         RCLCPP_INFO(this->get_logger(), "Scan canceled");
         return;
         }
+        
         time_remaining = static_cast<double>(goal->time) - (current_time.seconds() - start_time.seconds());
         //RCLCPP_INFO(this->get_logger(), "Time remaining: %f", time_remaining);
         feedback->sec_remain = time_remaining;
