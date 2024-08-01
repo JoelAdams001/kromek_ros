@@ -112,7 +112,7 @@ int sensor_num_;
 
     // Check if goal is done
     if (rclcpp::ok()) {
-      result->count = current_count;
+      result->count = current_count / goal->time;
       goal_handle->succeed(result);
       RCLCPP_INFO(this->get_logger(), "Scan finished, final count: %d", result->count);
     }
